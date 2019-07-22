@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "478807589982",
+    "firebase_url": "https://frcinventorymobile.firebaseio.com",
+    "project_id": "frcinventorymobile",
+    "storage_bucket": "frcinventorymobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478807589982:android:c19f9956b6fddd3d",
+        "android_client_info": {
+          "package_name": "ca.ateamrobotics.inventory.inventory_mobile_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478807589982-8p889cv8pe8ln117iblqe12pvekkcb62.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.ateamrobotics.inventory.inventory_mobile_application",
+            "certificate_hash": "78d15012f55d337f6e2c7f956f7cb67d8a9a9eae"
+          }
+        },
+        {
+          "client_id": "478807589982-r0uq4nr61do0ebarvbegqflgpenm0t86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB5PLoYtY0irkq4-NsslanZyWNVu1Vl0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478807589982-r0uq4nr61do0ebarvbegqflgpenm0t86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
