@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:io';
+import 'package:inventory_mobile_application/services/userManagement.dart';
+import 'package:inventory_mobile_application/ui/webView.dart';
+
+import 'checkout.dart';
+import 'login.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,6 +15,7 @@ class Home extends StatefulWidget {
 
 class HomeState extends State<Home> {
   Choice _selectedChoice = choices[0]; // The app's "state".
+  UserManagement user = UserManagement();
 
   void _select(Choice choice) {
     // Causes the app to rebuild with the new _selectedChoice.
@@ -35,7 +40,14 @@ class HomeState extends State<Home> {
             IconButton(
               icon: Icon(choices[0].icon),
               onPressed: () {
-                _select(choices[0]);
+                if(user.getLoginState()){
+                  var router = new MaterialPageRoute(builder: (BuildContext context) {
+                    return new Login();
+                  });
+                  Navigator.of(context).push(router);
+                }else{
+
+                }
               },
             ),
           ],
@@ -49,7 +61,24 @@ class HomeState extends State<Home> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.web), title: new Text('Manage')),
           ],
-          onTap: (index) {},
+          onTap: (index) {
+            if(index==0){
+              var router = new MaterialPageRoute(builder: (BuildContext context) {
+                return new Home();
+              });
+              Navigator.of(context).push(router);
+            }else if(index==1){
+              var router = new MaterialPageRoute(builder: (BuildContext context) {
+                return new CheckOut();
+              });
+              Navigator.of(context).push(router);
+            }else{
+              var router = new MaterialPageRoute(builder: (BuildContext context) {
+                return new WebViewPage();
+              });
+              Navigator.of(context).pushReplacement(router);
+            }
+          },
         ),
         body: Container(
           child: Padding(

@@ -17,15 +17,11 @@ class CheckOutState extends State<CheckOut> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue.shade700,
-        title: Text("FRC Inventory App"),
+        title: Text("Check Out Basket"),
       ),
-      body: Column(
-        children: <Widget>[
-          RaisedButton(
-            child: Text('Read Bar Code'),
-          )
-        ],
-      ),
+      body: Container(
+
+      )
     );
   }
 }
